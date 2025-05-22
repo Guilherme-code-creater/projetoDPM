@@ -1,46 +1,54 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: rgba(255, 230, 100, 0.15);
+  background-color: white
 }
 
-.barra-topo {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-background-color: #cbb873;
-color: white;
-padding: 1rem 2rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-z-index: 1000;
+header {
+  position: fixed;
+  top: 0;
+  width: 97%;
+  padding: 0 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Georgia', serif;
 }
 
-.titulo-site {
-font-size: 2rem;
-font-weight: bold;
-color: white;
-text-decoration: none;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.menu-links a {
-color: white;
-text-decoration: none;
-margin-left: 1rem;
-padding: 0.5rem 1rem;
-border-radius: 5px;
-
+.logo-img {
+  height: 80px;
+  width: auto;
 }
 
-.menu-links a:hover {
-background-color: #bfa75a;
+nav {
+  display: flex;
+  gap: 30px;
 }
 
-.menu-links a.ativo {
-background-color: #bfa75a;
-color: white;
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #bfa75a;
+}
+
+.ativo{
+  color: #bfa75a;
 }
 
 .rodape {
@@ -141,37 +149,123 @@ Página da gastronomia
   }
 
   .galeria-pratos {
-    max-width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
     padding: 0 1rem;
+}
+
+.titulo-pratos {
+    font-size: 2rem;
     text-align: center;
-  }
-  
-  .galeria-pratos h2 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
     color: #4a3e1c;
-  }
-  
-  .linha-pratos {
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.titulo-pratos::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #bfa75a;
+    margin: 0.8rem auto 0;
+}
+
+.container-pratos {
     display: flex;
-    justify-content: center;
-    gap: 0.8rem;
     flex-wrap: wrap;
-  }
-  
-  
-  .linha-pratos img {
-    width: 20%; 
-    height: auto; 
-    object-fit: cover; /* Garantimos que as imagens não deformem */
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.card-prato {
+    width: 250px;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .linha-pratos img:hover {
-    transform: scale(1.05);
-  }
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.card-prato:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.img-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(203, 184, 115, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-prato:hover .overlay {
+    opacity: 1;
+}
+
+.card-prato:hover img {
+    transform: scale(1.1);
+}
+
+.info-prato {
+    padding: 1.2rem;
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+
+.info-prato h3 {
+    font-size: 1.3rem;
+    color: #4a3e1c;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.info-prato p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+.saiba-mais {
+    display: inline-block;
+    color: #bfa75a;
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.card-prato:hover .saiba-mais {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card-prato:hover h3 {
+    color: #bfa75a;
+}
+
   
 
 /*-------------------------------------------------------------------

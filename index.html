@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Descobre os Sabores de Santarém</title>
-  <link rel="stylesheet" href="styles/main2.css">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
   <header>
-    <div class="logo">🌄 Santarém</div>
+    <a href="#" class="logo">
+      <img src="imagens/icon-fotor-bg-remover-2025050915596.png" alt="Logotipo de Santarém" class="logo-img">
+    </a>
     <nav>
       <a href="gastronomia.html">Gastronomia</a>
       <a href="historia.html">História</a>
@@ -19,52 +21,58 @@
   </header>
 
   <div class="container">
-    <!-- Seção 1 - Hero Globo (largura total) -->
     <section class="section hero-section">
       <div class="hero-container">
         <img src="imagens/sant.jpg" alt="Vista de Santarém" class="hero-img">
       </div>
     </section>
 
-    <!-- Seção 2 - Destaque -->
     <section class="section destaque-section">
       <div class="destaque-container">
         <img src="imagens/sant2.jpg" alt="Santarém Histórica" class="destaque-img">
         <div class="destaque-content">
-          <h2>Santarém Histórica</h2>
+          <h2>Explore a história de Santarém</h2>
           <p>Descobre os encantos da cidade ribatejana, berço de reis e capital do gótico em Portugal. Uma viagem pela história e cultura que moldaram esta região única.</p>
-          <button class="btn">Explorar</button>
+          <a href="historia.html"><button class="btn">Explorar</button></a>
         </div>
       </div>
     </section>
 
-    <!-- Seção 3 - 3 Quadrados -->
     <section class="section final-section">
-      <h2>Descobre Santarém</h2>
+      <h2>Descobre mais sobre Santarém</h2>
       <div class="quadrados-container">
-        <!-- Quadrado 1 - Gastronomia -->
-        <div class="quadrado">
-          <div class="quadrado-icon">🍽️</div>
-          <h3>Gastronomia</h3>
-          <p>Saboreie a rica culinária ribatejana com pratos tradicionais como a sopa da pedra e os famosos vinhos regionais.</p>
-        </div>
-        
-        <!-- Quadrado 2 - Mitologia -->
-        <div class="quadrado">
-          <div class="quadrado-icon">🧙</div>
-          <h3>Mitologia</h3>
-          <p>Explore as lendas e tradições que fazem parte do património cultural desta região histórica.</p>
-        </div>
-        
-        <!-- Quadrado 3 - Turismo -->
-        <div class="quadrado">
-          <div class="quadrado-icon">🏰</div>
-          <h3>Turismo</h3>
-          <p>Descubra os monumentos, paisagens e experiências únicas que Santarém tem para oferecer.</p>
-        </div>
+        <a href="gastronomia.html" class="quadrado-link">
+          <div class="quadrado">
+            <img src="imagens/celestemain.jpg" alt="Gastronomia de Santarém" class="quadrado-img">
+            <div class="quadrado-content">
+              <h3>Gastronomia</h3>
+              <p>Saboreie a rica culinária ribatejana com pratos tradicionais como a sopa da pedra e os famosos vinhos regionais.</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="mitologia.html" class="quadrado-link">
+          <div class="quadrado">
+            <img src="imagens/mitologia.jpg" alt="Mitologia de Santarém" class="quadrado-img">
+            <div class="quadrado-content">
+              <h3>Mitologia</h3>
+              <p>Explore as lendas e tradições que fazem parte do património cultural desta região histórica.</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="turismo.html" class="quadrado-link">
+          <div class="quadrado">
+            <img src="imagens/turismo.jpg" alt="Turismo em Santarém" class="quadrado-img">
+            <div class="quadrado-content">
+              <h3>Turismo</h3>
+              <p>Descubra os monumentos, paisagens e experiências únicas que Santarém tem para oferecer.</p>
+            </div>
+          </div>
+        </a>
       </div>
     </section>
   </div>
-
+  
 </body>
 </html>
