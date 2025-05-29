@@ -14,3 +14,5 @@ Pensámos que um site interativo seria uma forma prática e moderna de apresenta
 # Autores ✍
 Guilherme Henriques
 João Aurélio
+
+![image](https://github.com/user-attachments/assets/92f0e85e-3e57-48bb-baaa-f78873ed2d96)
