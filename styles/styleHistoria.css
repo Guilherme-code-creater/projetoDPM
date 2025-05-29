@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/*===============================================================================================================
+Navbar
+================================================================================================================*/
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+  position: relative;
+  padding: 5px 0;
+}
+
+nav a:hover {
+  color: #bfa75a;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #bfa75a;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #555;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 36px;
+  cursor: pointer;
+  color: #555;
+}
+
+.sidenav a {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidenav a:hover {
+  color: #bfa75a;
+  background-color: #f9f9f9;
+}
+
+/*===============================================================================================================
+Rodape
+================================================================================================================*/
+
+.rodape {
+  background-color: #cbb873;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.rodape .informacoes p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.rodape .redes-sociais {
+  margin: 1rem 0;
+}
+
+.rodape .social-icon {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.rodape .contacto p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.rodape .contacto a {
+  color: white;
+  text-decoration: none;
+}
+
+.rodape .contacto a:hover {
+  text-decoration: underline;
+}
+
+/*===============================================================================================================
+Parte do codigo
+================================================================================================================*/
+
+.linha-tempo {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.linha-tempo h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.evento {
+  border-left: 4px solid #bfa75a;
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.evento::before {
+  content: '';
+  position: absolute;
+  left: -13px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #bfa75a;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.conteudo-evento {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.conteudo-evento h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.conteudo-evento p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.imagem-evento img {
+  max-width: 70%;
+  margin: 1rem auto 0;
+  display: block;
+  border-radius: 6px;
+}
+
+/*===============================================================================================================
+Responsividades
+================================================================================================================*/
+@media (max-width: 1024px) {
+  header {
+    padding: 8px 15px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .linha-tempo {
+    margin: 5rem auto;
+    padding: 1.5rem;
+  }
+
+  .linha-tempo h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .evento {
+    margin: 1.5rem 0;
+    padding-left: 1.2rem;
+  }
+
+  .conteudo-evento {
+    padding: 1rem;
+  }
+
+  .conteudo-evento h2 {
+    font-size: 1.3rem;
+  }
+
+  .imagem-evento img {
+    max-width: 80%;
+  }
+
+  .rodape {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .logo-img {
+    height: 45px;
+  }
+
+  .linha-tempo {
+    margin: 4rem auto;
+    padding: 1rem;
+  }
+
+  .linha-tempo h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .evento {
+    margin: 1.2rem 0;
+  }
+
+  .conteudo-evento h2 {
+    font-size: 1.2rem;
+  }
+
+  .imagem-evento img {
+    max-width: 90%;
+  }
+
+  .rodape .redes-sociais {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .rodape .social-icon {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 5px 10px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .linha-tempo {
+    margin: 3.5rem auto 2rem;
+    padding: 0.8rem;
+  }
+
+  .linha-tempo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .evento {
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .evento::before {
+    left: -10px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .conteudo-evento {
+    padding: 0.8rem;
+  }
+
+  .conteudo-evento h2 {
+    font-size: 1.1rem;
+  }
+
+  .conteudo-evento p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .imagem-evento img {
+    max-width: 95%;
+    margin: 0.8rem auto 0 auto;
+  }
+
+  .rodape {
+    padding: 1.2rem 0;
+  }
+
+  .rodape .informacoes p,
+  .rodape .contacto p {
+    font-size: 0.9rem;
+  }
+
+  .sidenav {
+    padding-top: 50px;
+  }
+
+  .sidenav a {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .sidenav .closebtn {
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+  }
+}

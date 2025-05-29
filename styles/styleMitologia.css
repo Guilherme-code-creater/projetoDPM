@@ -1,0 +1,430 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/*===============================================================================================================
+Navbar
+================================================================================================================*/
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+  position: relative;
+  padding: 5px 0;
+}
+
+nav a:hover {
+  color: #bfa75a;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #bfa75a;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #555;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 36px;
+  cursor: pointer;
+  color: #555;
+}
+
+.sidenav a {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidenav a:hover {
+  color: #bfa75a;
+  background-color: #f9f9f9;
+}
+
+/*===============================================================================================================
+Rodape
+================================================================================================================*/
+
+.rodape {
+  background-color: #cbb873;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.rodape .informacoes p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.rodape .redes-sociais {
+  margin: 1rem 0;
+}
+
+.rodape .social-icon {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.rodape .contacto p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.rodape .contacto a {
+  color: white;
+  text-decoration: none;
+}
+
+.rodape .contacto a:hover {
+  text-decoration: underline;
+}
+
+/*===============================================================================================================
+Parte do codigo
+================================================================================================================*/
+
+.secao-mitologia {
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 6rem auto 3rem;
+}
+
+.secao-mitologia h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #4a3e1c;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.secao-mitologia h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #bfa75a;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.conteudo-mitologia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.texto-mitologia {
+  flex: 1 1 500px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.texto-mitologia p {
+  margin-bottom: 1rem;
+}
+
+.texto-mitologia p:first-of-type::first-letter {
+  float: left;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+  padding-right: 0.6rem;
+  color: #bfa75a;
+}
+
+.imagem-mitologia {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.imagem-mitologia img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border: 2px solid #bfa75a;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*===============================================================================================================
+Responsividades
+================================================================================================================*/
+
+@media (max-width: 1024px) {
+  header {
+    padding: 8px 15px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .secao-mitologia {
+    padding: 3rem 1.5rem;
+    margin-top: 5rem;
+  }
+
+  .secao-mitologia h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .texto-mitologia {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    padding: 1.2rem;
+  }
+
+  .imagem-mitologia img {
+    max-height: 320px;
+  }
+
+  .rodape {
+    padding: 1.8rem 0;
+  }
+
+  .rodape .informacoes p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  .secao-mitologia {
+    padding: 2rem 1rem;
+    margin-top: 6rem;
+  }
+
+  .secao-mitologia h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .conteudo-mitologia {
+    gap: 0;
+  }
+
+  .texto-mitologia {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+
+  .texto-mitologia p:last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .imagem-mitologia {
+    margin-top: -0.5rem;
+  }
+
+  .rodape {
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .rodape .redes-sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .rodape .social-icon {
+    margin: 0;
+  }
+
+  .rodape .contacto p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 5px 10px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  .mobile-menu-btn {
+    font-size: 1.3rem;
+  }
+
+  .secao-mitologia {
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+  }
+
+  .secao-mitologia h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .conteudo-mitologia {
+    gap: 0.5rem;
+  }
+
+  .texto-mitologia {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+
+  .imagem-mitologia img {
+    max-height: 250px;
+    border-radius: 8px;
+    border-width: 1px;
+  }
+
+  .rodape {
+    padding: 1.5rem 0;
+  }
+
+  .rodape .informacoes p,
+  .rodape .contacto p {
+    font-size: 0.85rem;
+  }
+
+  .rodape .redes-sociais {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sidenav {
+    padding-top: 50px;
+  }
+
+  .sidenav a {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .sidenav .closebtn {
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+  }
+}
