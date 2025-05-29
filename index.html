@@ -5,14 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Descobre os Sabores de Santarém</title>
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+  <!-- Menu lateral escondido -->
+  <div id="mySidenav" class="sidenav">
+    <span class="closebtn" onclick="closeNav()">&times;</span>
+    <a href="gastronomia.html">Gastronomia</a>
+    <a href="historia.html">História</a>
+    <a href="mitologia.html">Mitologia</a>
+    <a href="turismo.html">Turismo</a>
+  </div>
 
   <header>
     <a href="#" class="logo">
       <img src="imagens/icon-fotor-bg-remover-2025050915596.png" alt="Logotipo de Santarém" class="logo-img">
     </a>
-    <nav>
+
+    <!-- Botão que abre o menu lateral -->
+    <button class="mobile-menu-btn" aria-label="Menu" onclick="openNav()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Menu desktop permanece igual -->
+    <nav class="desktop-nav">
       <a href="gastronomia.html">Gastronomia</a>
       <a href="historia.html">História</a>
       <a href="mitologia.html">Mitologia</a>
@@ -21,9 +38,14 @@
   </header>
 
   <div class="container">
+    <!-- Secções mantidas iguais -->
     <section class="section hero-section">
       <div class="hero-container">
         <img src="imagens/sant.jpg" alt="Vista de Santarém" class="hero-img">
+        <div class="hero-text">
+          <h1>Bem-vindo a Santarém</h1>
+          <p>Capital do Gótico em Portugal</p>
+        </div>
       </div>
     </section>
 
@@ -73,6 +95,17 @@
       </div>
     </section>
   </div>
-  
+
+  <!-- Script com funções openNav e closeNav -->
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
 </body>
 </html>
