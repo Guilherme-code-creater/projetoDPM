@@ -179,10 +179,20 @@ Parte do codigo
 
 .linha-tempo h1 {
   text-align: center;
+  color: #4a3e1c;
   font-size: 2.5rem;
   margin-bottom: 3rem;
 }
 
+.linha-tempo h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #bfa75a;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
 .evento {
   border-left: 4px solid #bfa75a;
   margin: 2rem 0;
@@ -293,7 +303,7 @@ Responsividades
   }
 
   .logo-img {
-    height: 45px;
+    height: 50px;
   }
 
   .linha-tempo {
@@ -338,7 +348,7 @@ Responsividades
   }
 
   .logo-img {
-    height: 40px;
+    height: 50px;
   }
 
   .linha-tempo {

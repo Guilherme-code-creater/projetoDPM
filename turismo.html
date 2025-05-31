@@ -3,19 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styleTurismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>História de Santarém</title>
 </head>
 <body>
-    <header>
+
+   <div id="mySidenav" class="sidenav">
+    <span class="closebtn" onclick="closeNav()">&times;</span>
+    <a href="gastronomia.html">Gastronomia</a>
+    <a href="historia.html">História</a>
+    <a href="mitologia.html">Mitologia</a>
+    <a href="#">Turismo</a>
+  </div>
+
+  <header>
     <a href="index.html" class="logo">
       <img src="imagens/icon-fotor-bg-remover-2025050915596.png" alt="Logotipo de Santarém" class="logo-img">
     </a>
-    <nav>
+    
+    <button class="mobile-menu-btn" aria-label="Menu" onclick="openNav()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="desktop-nav">
       <a href="gastronomia.html">Gastronomia</a>
       <a href="historia.html">História</a>
       <a href="mitologia.html">Mitologia</a>
-      <a href="turismo.html" class="ativo">Turismo</a>
+      <a href="#">Turismo</a>
     </nav>
   </header>
       <section class="pontos-turisticos">
@@ -68,7 +83,7 @@
       
       <footer class="rodape">
         <div class="informacoes">
-          <p>&copy; 2025 Santarém | Guilherme Henriques</p>
+          <p>&copy; 2025 Santarém <br> Guilherme Henriques & João Aurélio</p>
         </div>
         <div class="redes-sociais">
           <a href="#" class="social-icon">Facebook</a>
@@ -79,5 +94,14 @@
           <p>Contacto: <a href="mailto:240001098@esg.ipsantarem.pt">240001098@esg.ipsantarem.pt</a></p>
         </div>
       </footer>
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "220px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
 </body>
 </html>

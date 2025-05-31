@@ -322,6 +322,10 @@ nav a:hover::after {
     max-width: 100%;
     padding: 30px 0;
   }
+
+  .logo-img {
+    height: 50px;
+  }
   
   .destaque-img {
     width: 100%;
@@ -388,6 +392,10 @@ nav a:hover::after {
 @media (max-width: 480px) {
   .hero-text h1 {
     font-size: 1.8rem;
+  }
+
+  .logo-img {
+    height: 50px;
   }
   
   .container {
