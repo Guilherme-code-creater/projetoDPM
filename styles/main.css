@@ -10,6 +10,11 @@ body {
   overflow-x: hidden;
 }
 
+/*===============================================================================================================
+Navbar
+================================================================================================================*/
+
+
 header {
   position: fixed;
   top: 0;
@@ -84,7 +89,6 @@ nav a:hover::after {
   padding: 5px;
 }
 
-/* Menu lateral à direita */
 .sidenav {
   height: 100%;
   width: 0;
@@ -99,7 +103,6 @@ nav a:hover::after {
   box-shadow: -2px 0 5px rgba(0,0,0,0.1);
 }
 
-/* Botão de fechar */
 .sidenav .closebtn {
   position: absolute;
   top: 15px;
@@ -109,7 +112,6 @@ nav a:hover::after {
   color: #555;
 }
 
-/* Links dentro do sidenav */
 .sidenav a {
   padding: 15px 30px;
   text-decoration: none;
@@ -123,6 +125,10 @@ nav a:hover::after {
   color: #bfa75a;
   background-color: #f9f9f9;
 }
+
+/*===============================================================================================================
+Parte do codigo
+================================================================================================================*/
 
 .section {
   height: 100vh;
@@ -255,6 +261,7 @@ nav a:hover::after {
   gap: 30px;
   margin-top: 30px;
   flex-wrap: wrap;
+  margin-bottom: 70px;
 }
 
 .quadrado-link {
@@ -313,7 +320,10 @@ nav a:hover::after {
   color: #555;
 }
 
-/* Responsive styles */
+/*===============================================================================================================
+Responsividades
+================================================================================================================*/
+
 @media (max-width: 1024px) {
   .destaque-container {
     flex-direction: column;
@@ -398,9 +408,6 @@ nav a:hover::after {
     height: 50px;
   }
   
-  .container {
-    padding-top: 80px;
-  }
   
   header {
     padding: 10px 15px;
@@ -448,3 +455,4 @@ nav a:hover::after {
     font-size: 0.9rem;
   }
 }
+
